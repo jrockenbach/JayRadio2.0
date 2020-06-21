@@ -1,0 +1,61 @@
+#body {
+    background-color: #dbc6eb;
+}
+
+body {
+    background-color: #dbc6eb;
+}
+
+.logo-img {
+    text-align: center;
+    padding-top: 15vh;
+}
+
+.track-img {
+    width: 40vh;
+}
+
+.acid-rap {
+    border: 20px;
+}
+
+#current-radio {
+    font-family: Heiti TC;
+}
+
+#song-name {
+    font-size: 14pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#artist-name {
+    font-size: 16pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.next {
+    margin-left: 2vh;
+}
+
+.track-info {
+    text-align: center;
+}
+
+.next-station {
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.h1 {
+    padding: 2vh;
+}
+
+.randomizer{
+    text-align: center;
+    margin-top: 2vh;
+}

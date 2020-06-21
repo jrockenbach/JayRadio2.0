@@ -1,0 +1,175 @@
+const stations = [{
+        name: "Chance the Rapper radio",
+        songs: [{
+                title: "All Day Long",
+                artist: "by Chance the Rapper",
+                background: "#4a482c",
+                image: "assets/all-day-long.jpeg"
+            },
+            {
+                title: "All Night",
+                artist: "by Chance the Rapper (feat. Knox fortune)",
+                background: "#7e3334",
+                image: "assets/all-night.jpeg"
+            },
+            {
+                title: "Juice",
+                artist: "by Chance the Rapper",
+                background: "#351b7e",
+                image: "assets/juice.jpeg"
+            }
+        ]
+    },
+    {
+        name: "Blink 182 radio",
+        songs: [{
+                title: "Cynical",
+                artist: "by Blink 182",
+                background: "#4c4a0c",
+                image: "assets/cynical.jpeg"
+            },
+            {
+                title: "Always",
+                artist: "by Blink182",
+                background: "#7f1b51",
+                image: "assets/always.jpeg"
+            },
+            {
+                title: "I Really Wish I Hated You",
+                artist: "by Blink182",
+                background: "#7f2221",
+                image: "assets/hated-you.jpeg"
+            }
+        ]
+    },
+    {
+        name:"SAINt JHN radio",
+        songs: [
+            {
+                title:"Roses Remix",
+                artist:"by SAINt JHN (feat. Future)",
+                background: "#804032",
+                image: "assets/roses-remix.jpeg"
+            },
+            {
+                title: "God Bless the Internet",
+                artist: "by SAINt JHN",
+                background: "#653e3f",
+                image: "assets/internet.jpeg"
+            },
+            {
+                title: "Trap",
+                artist: "by SAINt JHN (feat. Lil Baby)",
+                background: "#e9312c",
+                image: "assets/trap.jpeg"
+            }
+        ]
+    }
+    
+]
+
+
+let nextTrack = document.getElementById("next-btn");
+let prevTrack = document.getElementById("back-btn");
+
+let songName = document.getElementById("song-name");
+let artistName = document.getElementById("artist-name");
+let currentRadio = document.getElementById("current-radio");
+
+let nextStationCounter = document.getElementById("next-station");
+let prevStationCounter = document.getElementById("prev-station");
+let randomStation = document.getElementById("random-btn");
+let bodyBackground = document.getElementById("body");
+let trackImage = document.getElementById("track-img");
+
+
+let trackIndex = -1;
+let stationsIndex = 0;
+let chanceRadio = stations[0].songs;
+let blinkRadio = stations[1].songs;
+
+
+
+function nextSongCounter() {
+    trackIndex++;
+    console.log(trackIndex);
+    console.log(stations[stationsIndex].songs.length);
+    if (trackIndex > stations[stationsIndex].songs.length - 1) {
+        trackIndex = 0;
+    }
+};
+
+function prevSongCounter() {
+    trackIndex--;
+    if (trackIndex < 0) {
+        trackIndex = stations[stationsIndex].songs.length - 1;
+    }
+};
+
+function nextStation() {
+    trackIndex = 0;
+    stationsIndex++;
+    if (stationsIndex > stations.length - 1) {
+        stationsIndex = 0;
+    }
+};
+
+function prevStation() {
+    stationsIndex--;
+    if (stationsIndex < 0) {
+        stationsIndex = stations.length - 1;
+    }
+};
+
+// function randomizeStation() {
+//     if (stationsIndex < stations.length) {
+//         stationsIndex = stations.length[Math.floor(Math.random())*3];
+//     }
+// }
+
+nextTrack.onclick = () => {
+    nextSongCounter()
+    currentRadio.innerHTML = stations[stationsIndex].name;
+    songName.innerHTML = stations[stationsIndex].songs[trackIndex].title;
+    artistName.innerHTML = stations[stationsIndex].songs[trackIndex].artist;
+    trackImage.src = stations[stationsIndex].songs[trackIndex].image;
+    bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+}
+
+prevTrack.onclick = () => {
+    prevSongCounter()
+    currentRadio.innerHTML = stations[stationsIndex].name;
+    songName.innerHTML = stations[stationsIndex].songs[trackIndex].title;
+    artistName.innerHTML = stations[stationsIndex].songs[trackIndex].artist;
+    trackImage.src = stations[stationsIndex].songs[trackIndex].image;
+    bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+}
+
+nextStationCounter.onclick = () => {
+    nextStation()
+    currentRadio.innerHTML = stations[stationsIndex].name;
+    songName.innerHTML = stations[stationsIndex].songs[0].title;
+    artistName.innerHTML = stations[stationsIndex].songs[0].artist;
+    trackImage.src = stations[stationsIndex].songs[trackIndex].image;
+    bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+}
+
+prevStationCounter.onclick = () => {
+    prevStation()
+    currentRadio.innerHTML = stations[stationsIndex].name;
+    songName.innerHTML = stations[stationsIndex].songs[0].title;
+    artistName.innerHTML = stations[stationsIndex].songs[0].artist;
+    trackImage.src = stations[stationsIndex].songs[trackIndex].image;
+    bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+}
+
+// randomStation.onclick = () => {
+//     randomizeStation()
+//     currentRadio.innerHTML = stations[stationsIndex].name;
+//     songName.innerHTML = stations[stationsIndex].songs[0].title;
+//     artistName.innerHTML = stations[stationsIndex].songs[0].artist;
+// }
+
+// randomStation.onclick = () => {
+
+// }

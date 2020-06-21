@@ -8,11 +8,12 @@ body {
 
 .logo-img {
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 10vh;
 }
 
 .track-img {
     width: 40vh;
+    border: solid black 5px;
 }
 
 .acid-rap {
@@ -24,12 +25,12 @@ body {
 }
 
 #song-name {
-    font-size: 14pt;
+    font-size: 18pt;
     font-family: 'Montserrat', sans-serif;
 }
 
 #artist-name {
-    font-size: 16pt;
+    font-size: 22pt;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -41,10 +42,18 @@ body {
 .next {
     margin-left: 2vh;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .back {
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .track-info {
@@ -55,10 +64,18 @@ body {
     margin-left: 2vh;
     margin-right: 2vh;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .prev-station {
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .h1 {
@@ -70,10 +87,16 @@ body {
     margin-top: 2vh;
     cursor: pointer;
     margin-bottom: 4vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .random-btn {
     cursor: pointer;
+    padding: 10px;
+    border-radius: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 }
 
 .audio {

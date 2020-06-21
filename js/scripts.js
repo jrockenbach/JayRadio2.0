@@ -186,7 +186,7 @@ randomStation.onclick = () => {
     artistName.innerHTML = stations[stationsIndex].songs[0].artist;
     trackImage.src = stations[stationsIndex].songs[0].image;
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[0].background;
-    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
+    playTrack.src = stations[stationsIndex].songs[0].track;
 }
 
 // randomStation.onclick = () => {

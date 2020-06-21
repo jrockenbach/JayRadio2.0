@@ -46,6 +46,7 @@ body {
     border-radius: 5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .back {
@@ -54,6 +55,7 @@ body {
     border-radius: 5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .track-info {
@@ -68,6 +70,7 @@ body {
     border-radius: 5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .prev-station {
@@ -76,6 +79,7 @@ body {
     border-radius: 5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .h1 {
@@ -89,6 +93,7 @@ body {
     margin-bottom: 4vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .random-btn {
@@ -97,6 +102,7 @@ body {
     border-radius: 5%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-color: white;
 }
 
 .audio {

@@ -40,6 +40,11 @@ body {
 
 .next {
     margin-left: 2vh;
+    cursor: pointer;
+}
+
+.back {
+    cursor: pointer;
 }
 
 .track-info {
@@ -49,6 +54,11 @@ body {
 .next-station {
     margin-left: 2vh;
     margin-right: 2vh;
+    cursor: pointer;
+}
+
+.prev-station {
+    cursor: pointer;
 }
 
 .h1 {
@@ -58,6 +68,12 @@ body {
 .randomizer{
     text-align: center;
     margin-top: 2vh;
+    cursor: pointer;
+    margin-bottom: 4vh;
+}
+
+.random-btn {
+    cursor: pointer;
 }
 
 .audio {

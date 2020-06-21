@@ -4,19 +4,22 @@ const stations = [{
                 title: "All Day Long",
                 artist: "by Chance the Rapper",
                 background: "#4a482c",
-                image: "assets/all-day-long.jpeg"
+                image: "assets/all-day-long.jpeg",
+                track: "assets/all-day-long.mp3"
             },
             {
                 title: "All Night",
                 artist: "by Chance the Rapper (feat. Knox fortune)",
                 background: "#7e3334",
-                image: "assets/all-night.jpeg"
+                image: "assets/all-night.jpeg",
+                track: "assets/all-night.mp3"
             },
             {
                 title: "Juice",
                 artist: "by Chance the Rapper",
                 background: "#351b7e",
-                image: "assets/juice.jpeg"
+                image: "assets/juice.jpeg",
+                track: "assets/juice.mp3"
             }
         ]
     },
@@ -26,19 +29,22 @@ const stations = [{
                 title: "Cynical",
                 artist: "by Blink 182",
                 background: "#4c4a0c",
-                image: "assets/cynical.jpeg"
+                image: "assets/cynical.jpeg",
+                track: "assets/cynical.mp3"
             },
             {
                 title: "Always",
                 artist: "by Blink182",
                 background: "#7f1b51",
-                image: "assets/always.jpeg"
+                image: "assets/always.jpeg",
+                track: "assets/always.mp3"
             },
             {
                 title: "I Really Wish I Hated You",
                 artist: "by Blink182",
                 background: "#7f2221",
-                image: "assets/hated-you.jpeg"
+                image: "assets/hated-you.jpeg",
+                track: "assets/hated-you.mp3"
             }
         ]
     },
@@ -49,19 +55,22 @@ const stations = [{
                 title:"Roses Remix",
                 artist:"by SAINt JHN (feat. Future)",
                 background: "#804032",
-                image: "assets/roses-remix.jpeg"
+                image: "assets/roses-remix.jpeg",
+                track: "assets/roses-remix.mp3"
             },
             {
                 title: "God Bless the Internet",
                 artist: "by SAINt JHN",
                 background: "#653e3f",
-                image: "assets/internet.jpeg"
+                image: "assets/internet.jpeg",
+                track: "assets/internet.mp3"
             },
             {
                 title: "Trap",
                 artist: "by SAINt JHN (feat. Lil Baby)",
                 background: "#e9312c",
-                image: "assets/trap.jpeg"
+                image: "assets/trap.jpeg",
+                track: "assets/trap.mp3"
             }
         ]
     }
@@ -81,6 +90,7 @@ let prevStationCounter = document.getElementById("prev-station");
 let randomStation = document.getElementById("random-btn");
 let bodyBackground = document.getElementById("body");
 let trackImage = document.getElementById("track-img");
+let playTrack = document.getElementById("audio-src");
 
 
 let trackIndex = -1;
@@ -121,11 +131,12 @@ function prevStation() {
     }
 };
 
-// function randomizeStation() {
-//     if (stationsIndex < stations.length) {
-//         stationsIndex = stations.length[Math.floor(Math.random())*3];
-//     }
-// }
+function randomizeStation() {
+    if (stationsIndex < stations.length) {
+        stationsIndex = Math.floor(Math.random()*3); // This is saying stations index = 2 [random #];
+    }
+    console.log(stationsIndex);
+}
 
 nextTrack.onclick = () => {
     nextSongCounter()
@@ -134,6 +145,7 @@ nextTrack.onclick = () => {
     artistName.innerHTML = stations[stationsIndex].songs[trackIndex].artist;
     trackImage.src = stations[stationsIndex].songs[trackIndex].image;
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
 }
 
 prevTrack.onclick = () => {
@@ -143,6 +155,7 @@ prevTrack.onclick = () => {
     artistName.innerHTML = stations[stationsIndex].songs[trackIndex].artist;
     trackImage.src = stations[stationsIndex].songs[trackIndex].image;
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
 }
 
 nextStationCounter.onclick = () => {
@@ -152,6 +165,7 @@ nextStationCounter.onclick = () => {
     artistName.innerHTML = stations[stationsIndex].songs[0].artist;
     trackImage.src = stations[stationsIndex].songs[trackIndex].image;
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
 }
 
 prevStationCounter.onclick = () => {
@@ -161,14 +175,19 @@ prevStationCounter.onclick = () => {
     artistName.innerHTML = stations[stationsIndex].songs[0].artist;
     trackImage.src = stations[stationsIndex].songs[trackIndex].image;
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[trackIndex].background;
+    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
 }
 
-// randomStation.onclick = () => {
-//     randomizeStation()
-//     currentRadio.innerHTML = stations[stationsIndex].name;
-//     songName.innerHTML = stations[stationsIndex].songs[0].title;
-//     artistName.innerHTML = stations[stationsIndex].songs[0].artist;
-// }
+randomStation.onclick = () => {
+    randomizeStation()
+    console.log(stationsIndex);
+    currentRadio.innerHTML = stations[stationsIndex].name;
+    songName.innerHTML = stations[stationsIndex].songs[0].title;
+    artistName.innerHTML = stations[stationsIndex].songs[0].artist;
+    trackImage.src = stations[stationsIndex].songs[0].image;
+    bodyBackground.style.backgroundColor = stations[stationsIndex].songs[0].background;
+    playTrack.src = stations[stationsIndex].songs[trackIndex].track;
+}
 
 // randomStation.onclick = () => {
 

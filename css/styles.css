@@ -47,6 +47,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
+    box-shadow: 5px 10px #222831;
 }
 
 .back {
@@ -56,6 +57,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
+    box-shadow: 5px 10px #222831;
 }
 
 .track-info {
@@ -71,6 +73,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
+    box-shadow: 5px 10px #222831;
 }
 
 .prev-station {
@@ -80,6 +83,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
+    box-shadow: 5px 10px #222831;
 }
 
 .h1 {
@@ -102,6 +106,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     background-color: white;
+    box-shadow: 5px 10px #222831;
 }
 
 .audio {

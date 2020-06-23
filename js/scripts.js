@@ -1,6 +1,7 @@
 const stations = [{
         name: "Chance the Rapper radio",
-        songs: [{
+        songs: [
+            {
                 title: "All Day Long",
                 artist: "by Chance the Rapper",
                 background: "#4a482c",
@@ -25,7 +26,8 @@ const stations = [{
     },
     {
         name: "Blink 182 radio",
-        songs: [{
+        songs: [
+            {
                 title: "Cynical",
                 artist: "by Blink 182",
                 background: "#4c4a0c",
@@ -47,7 +49,7 @@ const stations = [{
                 track: "assets/hated-you.mp3"
             }
         ]
-    },
+    },           
     {
         name:"SAINt JHN radio",
         songs: [
@@ -73,8 +75,59 @@ const stations = [{
                 track: "assets/trap.mp3"
             }
         ]
-    }
-    
+    },
+    {
+        name:"Wiley's Radio",
+        songs: [
+            {
+                title:"Feel Good Inc.",
+                artist:"Gorillaz",
+                background: "#384f67",
+                image: "assets/feel-good.jpeg",
+                track: "assets/feel-good.mp3"
+            },
+            {
+                title: "Clint Eastwood",
+                artist: "Gorillaz",
+                background: "#723c36",
+                image: "assets/clint.jpeg",
+                track: "assets/clint-eastwood.mp3"
+            },
+            {
+                title: "Demon Days",
+                artist: "Gorillaz",
+                background: "#593f49",
+                image: "assets/demon-days.jpeg",
+                track: "assets/demon-days.mp3"
+            }
+        ]
+    },
+    {
+        name:"Jessica's radio",
+        songs: [
+            {
+                title:"Ongeveer",
+                artist:"Eefje de Visser",
+                background: "#606060",
+                image: "assets/ongeveer.jpeg",
+                track: "assets/ongeveer.mp3"
+            },
+            {
+                title: "forever rain",
+                artist: "RM",
+                background: "#595959",
+                image: "assets/forever-rain.jpeg",
+                track: "assets/forever-rain.mp3"
+            },
+            {
+                title: "Time in a Tree",
+                artist: "Raleigh Ritchie",
+                background: "#12147e",
+                image: "assets/time-tree.jpeg",
+                track: "assets/time-tree.mp3"
+            }
+        ]
+    },    
 ]
 
 
@@ -133,10 +186,11 @@ function prevStation() {
 
 function randomizeStation() {
     if (stationsIndex < stations.length) {
-        stationsIndex = Math.floor(Math.random()*3); // This is saying stations index = 2 [random #];
+        stationsIndex = Math.floor(Math.random()*5); // This is saying stations index = 2 [random #];
     }
     console.log(stationsIndex);
 }
+
 
 nextTrack.onclick = () => {
     nextSongCounter()
@@ -188,7 +242,3 @@ randomStation.onclick = () => {
     bodyBackground.style.backgroundColor = stations[stationsIndex].songs[0].background;
     playTrack.src = stations[stationsIndex].songs[0].track;
 }
-
-// randomStation.onclick = () => {
-
-// }
